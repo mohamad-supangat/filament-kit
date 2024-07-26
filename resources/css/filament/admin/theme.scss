@@ -1,0 +1,95 @@
+@import "/vendor/filament/filament/resources/css/theme.css";
+@import "/vendor/awcodes/filament-table-repeater/resources/css/plugin.css";
+// @import '../../app.scss';
+
+@config 'tailwind.config.js';
+
+.stat {
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+}
+.stat-figure {
+    grid-column-start: 2;
+    grid-row: span 3 / span 3;
+    grid-row-start: 1;
+    place-self: center;
+    justify-self: end;
+}
+.stat-title {
+    grid-column-start: 1;
+    white-space: nowrap;
+}
+.stat-value {
+    grid-column-start: 1;
+    white-space: nowrap;
+}
+.stat-desc {
+    grid-column-start: 1;
+    white-space: nowrap;
+}
+.stat-actions {
+    grid-column-start: 1;
+    white-space: nowrap;
+}
+
+table.supangat-table-border {
+    border-collapse: collapse;
+    margin: 9px 0;
+    font-size: -1.9em;
+    font-family: sans-serif;
+
+    thead tr {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        text-align: left;
+
+        th {
+            text-transform: uppercase;
+        }
+    }
+
+    th,
+    td {
+        padding: 0.5em;
+        vertical-align: top;
+    }
+
+    tbody tr {
+        /* border-bottom: 0px solid #dddddd; */
+    }
+
+    tbody tr:nth-of-type(even) {
+        /* background-color: #f2f3f3; */
+        background-color: rgba(200, 200, 200, 0.1);
+    }
+
+    tbody tr:last-of-type {
+        /* border-bottom: 1px solid #333; */
+    }
+
+    // styky
+    thead,
+    tr > th {
+        position: sticky;
+        top: 0;
+        // background: #fff;
+        // color: white !important;
+        // background: #777 !important;
+        // border-color: #333 !important;
+        // border: 1px solid #fff !important;
+        z-index: 99;
+    }
+
+    thead {
+        top: 0;
+        z-index: 2;
+    }
+    // tr > th {
+    //     left: 0;
+    //     z-index: 1;
+    // }
+    // thead tr > th:first-child {
+    //     z-index: 3;
+    // }
+}
